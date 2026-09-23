@@ -22,3 +22,9 @@ Los siguientes requerimientos fueron definidos a partir de un proceso de investi
 * **RNF-03 (Accesibilidad):** La plataforma debe ser *Responsive* (adaptable a diferentes tamaños de pantalla) para que los usuarios puedan utilizarla fluidamente tanto en computadoras de escritorio como en dispositivos móviles.
 * **RNF-04 (Desempeño):** La generación de documentos PDF y los cálculos matemáticos deben realizarse en un tiempo de respuesta menor a 3 segundos.
 
+## 4. Reglas de Negocio (RN)
+*Son las políticas legales o empresariales que rigen la lógica de la aplicación.*
+
+* **RN-01 (Base Legal):** Todas las fórmulas matemáticas utilizadas para la calculadora de prestaciones deben estar apegadas a los parámetros vigentes estipulados en la Ley Federal del Trabajo (LFT), jurisprudencia y de México.
+* **RN-02 (Alertas Jurídicas):** El sistema siempre debe emitir un "Disclaimer" o descargo de responsabilidad indicando que la aplicación tiene fines informativos y de orientación, pero no sustituye el consejo formal y personalizado de un abogado laboral.
+
