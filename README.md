@@ -24,12 +24,12 @@ Antes de definir la funcionalidad del software, es de importancia crítica comun
 * **RF-05 (Generación de Documentos):** El sistema debe permitir la autocompletación, generación y descarga de plantillas legales en formato PDF (Ejemplo: solicitud de citatorio para conciliación y carta para PROFEDET).
 
 ## 3. Requisitos No Funcionales (RNF)
-*Son las restricciones, estándares de calidad y características técnicas del sistema.*
+*Son las restricciones, atributos y estándares que garantizan que el software tenga alta calidad, sea confiable, seguro y trabaje con eficiencia en las plataformas de los usuarios.*
 
-* **RNF-01 (Privacidad y Seguridad):** El sistema no debe requerir que el usuario se registre, ni debe almacenar nombres reales de las empresas empleadoras o datos personales del usuario en bases de datos externas. Todo procesamiento debe ejecutarse del lado del cliente (Local Storage) para proteger la identidad del usuario.
-* **RNF-02 (Usabilidad - UX):** La interfaz de usuario (UI) debe estar diseñada para personas sin formación jurídica, sustituyendo los tecnicismos legales por lenguaje claro y pedagógico.
-* **RNF-03 (Accesibilidad):** La plataforma debe ser *Responsive* (adaptable a diferentes tamaños de pantalla) para que los usuarios puedan utilizarla fluidamente tanto en computadoras de escritorio como en dispositivos móviles.
-* **RNF-04 (Desempeño):** La generación de documentos PDF y los cálculos matemáticos deben realizarse en un tiempo de respuesta menor a 3 segundos.
+* **RNF-01 (Privacidad y Seguridad):** El sistema debe proteger la integridad del usuario; por lo tanto, no requerirá registro ni almacenará datos personales o empresariales en bases externas, ejecutando todo el procesamiento en el almacenamiento local del dispositivo (Local Storage).
+* **RNF-02 (Usabilidad - UX):** Siguiendo el principio de diseño "Mantenlo sencillo, estúpido" (KISS), la interfaz debe ser tan simple como sea posible para su audiencia. Se sustituirán los tecnicismos legales por un lenguaje claro y pedagógico, cumpliendo el principio de diseñar con la certeza de que otras personas consumirán y deberán entender el producto.
+* **RNF-03 (Accesibilidad):** La plataforma debe estar diseñada de forma *Responsive* (adaptable a diferentes tamaños de pantalla) para garantizar que funcione eficientemente sobre diversas máquinas reales, tanto en computadoras de escritorio como en dispositivos móviles.
+* **RNF-04 (Desempeño):** Para asegurar un funcionamiento eficiente, los algoritmos de cálculo y la generación de documentos PDF deben completarse en un tiempo de respuesta menor a 3 segundos.
 
 ## 4. Reglas de Negocio (RN)
 *Son las políticas legales o empresariales que rigen la lógica de la aplicación.*
