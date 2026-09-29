@@ -2,6 +2,13 @@
 
 # Requerimientos del Sistema: App Asesor Jurídico Laboral
 
+## 0. Necesidad de la aplicación (Justificación)
+*Describe el propósito principal y la razón de ser del sistema, demostrando cómo resuelve un problema real y aporta beneficios directos al usuario.*
+
+* Todo sistema de software existe por una sola razón: para proporcionar valor a sus usuarios.
+* Los recién egresados, en especial los ingenieros que se enfrentan a su primer trabajo, requieren orientación certera para evitar abusos contractuales. La aplicación surge para ofrecer este valor al brindar instrucciones, estructuras de datos e información descriptiva que les permitan entender y manipular adecuadamente la información sobre sus derechos.
+* Aplicando el principio fundamental de la ingeniería de software que dicta "entender el problema" antes de plantear la solución, se identifica que los nuevos profesionistas necesitan una herramienta accesible de alta calidad que los proteja de escenarios donde la desinformación podría ocasionar un gran daño económico.
+
 ## 1. Contexto y Estudio de Usuarios (Elicitación)
 Los siguientes requerimientos fueron definidos a partir de un proceso de investigación y elicitación de requisitos. Se diseñó y aplicó una encuesta estructurada a estudiantes de último año y recién egresados (usuarios objetivo) para evaluar su nivel de conocimiento sobre derechos laborales, prestaciones, identificación de cláusulas abusivas y procesos de defensa legal. Los resultados de este estudio justifican la necesidad de los módulos de cálculo, auditoría de contratos y guía procesal descritos a continuación.
 
