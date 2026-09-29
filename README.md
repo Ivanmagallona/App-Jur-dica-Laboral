@@ -32,8 +32,7 @@ Antes de definir la funcionalidad del software, es de importancia crítica comun
 * **RNF-04 (Desempeño):** Para asegurar un funcionamiento eficiente, los algoritmos de cálculo y la generación de documentos PDF deben completarse en un tiempo de respuesta menor a 3 segundos.
 
 ## 4. Reglas de Negocio (RN)
-*Son las políticas legales o empresariales que rigen la lógica de la aplicación.*
+*Son las políticas, fundamentos legales o directrices que restringen y determinan la lógica con la que el sistema procesa la información para garantizar su validez y fiabilidad.*
 
-* **RN-01 (Base Legal):** Todas las fórmulas matemáticas utilizadas para la calculadora de prestaciones deben estar apegadas a los parámetros vigentes estipulados en la Ley Federal del Trabajo (LFT), jurisprudencia y de México.
-* **RN-02 (Alertas Jurídicas):** El sistema siempre debe emitir un "Disclaimer" o descargo de responsabilidad indicando que la aplicación tiene fines informativos y de orientación, pero no sustituye el consejo formal y personalizado de un abogado laboral.
-
+* **RN-01 (Base Legal):** Dado que las fallas en la lógica del software podrían ocasionar un daño económico severo al usuario o llevarlo a tomar malas decisiones, todas las fórmulas matemáticas deben estar estrictamente apegadas a los parámetros vigentes estipulados en la Ley Federal del Trabajo (LFT) y la jurisprudencia de México.
+* **RN-02 (Alertas Jurídicas):** El sistema debe priorizar la protección legal integrando un "Disclaimer" (descargo de responsabilidad). Este advertirá que la aplicación tiene fines informativos y de orientación, pero bajo ninguna circunstancia sustituye el consejo formal y personalizado de un abogado laboral.
