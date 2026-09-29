@@ -15,13 +15,13 @@
 Antes de definir la funcionalidad del software, es de importancia crítica comunicarse y colaborar con los participantes para entender sus necesidades. Por ello, se diseñó y aplicó una encuesta estructurada a estudiantes de último año y recién egresados (usuarios objetivo) para evaluar su nivel de conocimiento sobre derechos laborales y procesos legales. A través de esta comunicación efectiva continua, se obtuvieron requerimientos no ambiguos que justifican el desarrollo de los módulos de cálculo, auditoría y guía procesal, asegurando que las características del software respondan a problemas y demandas reales.
 
 ## 2. Requisitos Funcionales (RF)
-*Son las acciones y funciones específicas que la aplicación le permitirá realizar al usuario.*
+*Son las instrucciones (programas de computadora) que, al ser ejecutadas, proporcionarán las características, las funciones y el desempeño específicos deseados por el usuario.*
 
-* **RF-01 (Módulo de Cálculo):** El sistema debe permitir al usuario ingresar su salario (bruto o neto), fecha de inicio y fecha de término para calcular el proporcional de aguinaldo y prima vacacional.
-* **RF-02 (Finiquito vs. Liquidación):** El sistema debe calcular y desglosar la diferencia monetaria entre una renuncia voluntaria (finiquito) y un despido injustificado (liquidación constitucional de 90 días + 20 días por año + prima de antigüedad).
-* **RF-03 (Auditor de Contratos):** El sistema debe contar con un cuestionario interactivo que actúe como un "Semáforo de Riesgo" para detectar anomalías contractuales (como firma de pagarés en blanco, cláusulas de no competencia desmedidas o simulación de honorarios).
-* **RF-04 (Ruta Procesal):** El sistema debe mostrar un flujograma o línea de tiempo interactiva que explique las etapas del proceso laboral mexicano (desde la conciliación perjudicial de 45 días hasta el juicio).
-* **RF-05 (Generación de Documentos):** El sistema debe generar y permitir la descarga de plantillas autocompletables en formato PDF (ej. Solicitud de citatorio para conciliación y carta de solicitud de representación en PROFEDET).
+* **RF-01 (Módulo de Cálculo):** El programa debe procesar los datos de entrada del usuario (salario bruto o neto, fecha de inicio y término) para calcular con exactitud la proporción de aguinaldo y prima vacacional correspondiente.
+* **RF-02 (Finiquito vs. Liquidación):** El sistema debe ejecutar las operaciones matemáticas necesarias para calcular y desglosar la diferencia económica entre una renuncia voluntaria (finiquito) y un despido injustificado (liquidación constitucional de 90 días, 20 días por año y prima de antigüedad).
+* **RF-03 (Auditor de Contratos):** El sistema proporcionará una función de cuestionario interactivo ("Semáforo de Riesgo") para evaluar y detectar anomalías contractuales, tales como firmas de pagarés en blanco, cláusulas de no competencia desmedidas o simulación de honorarios.
+* **RF-04 (Ruta Procesal):** La aplicación debe contar con la característica visual de mostrar un flujograma interactivo que guíe paso a paso las etapas del proceso laboral mexicano (desde la conciliación prejudicial de 45 días hasta el juicio).
+* **RF-05 (Generación de Documentos):** El sistema debe permitir la autocompletación, generación y descarga de plantillas legales en formato PDF (Ejemplo: solicitud de citatorio para conciliación y carta para PROFEDET).
 
 ## 3. Requisitos No Funcionales (RNF)
 *Son las restricciones, estándares de calidad y características técnicas del sistema.*
