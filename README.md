@@ -10,7 +10,9 @@
 * Aplicando el principio fundamental de la ingeniería de software que dicta "entender el problema" antes de plantear la solución, se identifica que los nuevos profesionistas necesitan una herramienta accesible de alta calidad que los proteja de escenarios donde la desinformación podría ocasionar un gran daño económico.
 
 ## 1. Contexto y Estudio de Usuarios (Elicitación)
-Los siguientes requerimientos fueron definidos a partir de un proceso de investigación y elicitación de requisitos. Se diseñó y aplicó una encuesta estructurada a estudiantes de último año y recién egresados (usuarios objetivo) para evaluar su nivel de conocimiento sobre derechos laborales, prestaciones, identificación de cláusulas abusivas y procesos de defensa legal. Los resultados de este estudio justifican la necesidad de los módulos de cálculo, auditoría de contratos y guía procesal descritos a continuación.
+*Actividad inicial de comunicación donde, antes de comenzar cualquier trabajo técnico, se colabora con los usuarios para comprender sus objetivos y reunir los requerimientos del sistema.*
+
+Antes de definir la funcionalidad del software, es de importancia crítica comunicarse y colaborar con los participantes para entender sus necesidades. Por ello, se diseñó y aplicó una encuesta estructurada a estudiantes de último año y recién egresados (usuarios objetivo) para evaluar su nivel de conocimiento sobre derechos laborales y procesos legales. A través de esta comunicación efectiva continua, se obtuvieron requerimientos no ambiguos que justifican el desarrollo de los módulos de cálculo, auditoría y guía procesal, asegurando que las características del software respondan a problemas y demandas reales.
 
 ## 2. Requisitos Funcionales (RF)
 *Son las acciones y funciones específicas que la aplicación le permitirá realizar al usuario.*
