@@ -88,3 +88,60 @@ Se detalla el involucramiento y las tareas desarrolladas por cada integrante dur
 | Roberto Quintal Martinez | Requisitos no funcionales | 10% |
 | Elberth Alberto Cortazar | Priorización de requisitos y Reglas de negocio | 10% |
 | Oscaldo Francisco Solís Medina | Competencias | 10% |
+
+### flowchart TD
+    %% Estilos de Nodos
+    classDef inicioFin fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#1b5e20,font-weight:bold;
+    classDef menu fill:#bbdefb,stroke:#1565c0,stroke-width:2px,color:#0d47a1,font-weight:bold;
+    classDef modulo fill:#fff9c4,stroke:#fbc02d,stroke-width:2px,color:#f57f17,font-weight:bold;
+    classDef proceso fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px,color:#4a148c;
+    classDef output fill:#e0f2f1,stroke:#00695c,stroke-width:2px,color:#004d40;
+    classDef legal fill:#ffccbc,stroke:#d84315,stroke-width:2px,color:#bf360c,font-weight:bold;
+
+    %% Nodos principales
+    Start([Inicio de Sesión\nLocal Storage]) ::: inicioFin
+    Menu[Menú Principal\nApp Asesor Jurídico] ::: menu
+
+    %% Módulos del Sistema
+    Mod1[Módulo de\nCálculo] ::: modulo
+    Mod2[Auditor de\nContratos] ::: modulo
+    Mod3[Ruta\nProcesal] ::: modulo
+    Mod4[Generación\nde Documentos] ::: modulo
+
+    %% Flujos Internos de Módulos
+    In1(Ingresar Salario,\nInicio y Término) ::: proceso
+    Out1(Desglose Económico:\nFiniquito vs Liquidación) ::: output
+
+    In2(Cuestionario Interactivo\nsobre Contrato) ::: proceso
+    Out2(Semáforo de Riesgo\ny Detección de Abusos) ::: output
+
+    In3(Flujograma de\nEtapas Legales) ::: proceso
+    Out3(Entendimiento del\nProceso Laboral) ::: output
+
+    In4(Llenar Formulario\ndel Usuario) ::: proceso
+    Out4(Autocompletado y\nDescarga de PDF) ::: output
+
+    Disclaimer([Aceptación de Alerta Jurídica\nFines Informativos]) ::: legal
+    End([Fin de Tarea / Retorno al Menú]) ::: inicioFin
+
+    %% Conexiones (Lógica de Navegación)
+    Start --> Menu
+    
+    Menu --> Mod1
+    Menu --> Mod2
+    Menu --> Mod3
+    Menu --> Mod4
+
+    Mod1 --> In1 --> Out1
+    Mod2 --> In2 --> Out2
+    Mod3 --> In3 --> Out3
+    Mod4 --> In4 --> Out4
+
+    Out1 --> Disclaimer
+    Out2 --> Disclaimer
+    Out3 --> Disclaimer
+    Out4 --> Disclaimer
+
+    Disclaimer --> End
+    End -.-> Menu
+    
