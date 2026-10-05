@@ -18,7 +18,7 @@
 10. [Evidencia y Presentación del Proyecto](#10-evidencia-y-presentación-del-proyecto)
     * Video Presentación
     * Evidencia de reuniones y Tabla de Participación
-11. [Diagrama de flujo]
+11. [Diagrama de flujo](#11-diagrama-de-flujo)
 
 ## 1. Descripción del Producto
 * **Objetivo:** Desarrollar una aplicación de software que brinde información, instrucciones y estructuras de cálculo automatizadas sobre derechos laborales, con el fin de orientar a los trabajadores en México y evitar abusos contractuales.
