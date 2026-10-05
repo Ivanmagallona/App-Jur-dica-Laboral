@@ -89,3 +89,4 @@ Se detalla el involucramiento y las tareas desarrolladas por cada integrante dur
 | Elberth Alberto Cortazar | Priorización de requisitos y Reglas de negocio | 10% |
 | Oscaldo Francisco Solís Medina | Competencias | 10% |
 
+! [Diagrama de flujo](https://1drv.ms/i/c/3cb4d8e77e579dfe/IQBwI5cln45DSKS_ojhrP80FAesdqFk4Qf8udsD1QPeFrok?e=fiAWwM) .
