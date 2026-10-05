@@ -1,5 +1,25 @@
 # App Jurídica Laboral
 
+# Índice
+
+1. [Descripción del Producto](#1-descripción-del-producto)
+2. [Usuarios y Cliente](#2-usuarios-y-cliente)
+3. [Necesidad de la Aplicación y Propuesta de Valor (Justificación)](#3-necesidad-de-la-aplicación-y-propuesta-de-valor-justificación)
+4. [Contexto y Elicitación de Requisitos](#4-contexto-y-elicitación-de-requisitos)
+5. [Requisitos Funcionales (RF) y Casos de Uso](#5-requisitos-funcionales-rf-y-casos-de-uso)
+   * Casos de Uso
+   * Historias de Usuario
+6. [Requisitos No Funcionales (RNF)](#6-requisitos-no-funcionales-rnf)
+7. [Priorización de Requisitos](#7-priorización-de-requisitos)
+8. [Reglas de Negocio (RN)](#8-reglas-de-negocio-rn)
+9. [Competencias](#9-competencias)
+   * Competencias Genéricas
+   * Competencias Específicas
+10. [Evidencia y Presentación del Proyecto](#10-evidencia-y-presentación-del-proyecto)
+    * Video Presentación
+    * Evidencia de reuniones y Tabla de Participación
+11. [Diagrama de flujo]
+
 ## 1. Descripción del Producto
 * **Objetivo:** Desarrollar una aplicación de software que brinde información, instrucciones y estructuras de cálculo automatizadas sobre derechos laborales, con el fin de orientar a los trabajadores en México y evitar abusos contractuales.
 * **Alcance:** El sistema abarcará el cálculo preciso de proporciones de aguinaldo, prima vacacional, diferencias entre finiquito y liquidación, la evaluación de contratos mediante cuestionarios interactivos, y la generación de documentos legales en formato PDF.
