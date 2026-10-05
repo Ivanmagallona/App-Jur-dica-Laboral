@@ -2,22 +2,22 @@
 
 # Índice
 
-1. [Descripción del Producto](https://1drv.ms/t/c/3cb4d8e77e579dfe/IQCV6pzlbCSyR6aUyRIHCqnHAVi9jTaovar5YX6UA2lIUrA?e=Jd2WuX)
-2. [Usuarios y Cliente](https://1drv.ms/t/c/3cb4d8e77e579dfe/IQAokC3LDLd7SKUQfGbnU9dYAQawJPXq1daOYClfWxGXht8?e=LtFM46)
-3. [Necesidad de la Aplicación y Propuesta de Valor (Justificación)](https://1drv.ms/t/c/3cb4d8e77e579dfe/IQBwC__PMAJzQJiS7r1nIakzAZ7HMyBOae-kvCdZFGa0vGc?e=UA7Gxa)
-4. [Contexto y Elicitación de Requisitos](https://1drv.ms/t/c/3cb4d8e77e579dfe/IQCQKEQjpggxSax8AisMsJMQATL6tiQvkOeZgiQvecJCb0Q?e=Z1JU9D)
-5. [Requisitos Funcionales (RF) y Casos de Uso](https://1drv.ms/t/c/3cb4d8e77e579dfe/IQDRswdqnRnMQ5yl2j_jdiLQAeS5D9hDgzBG03Zq1OSbzW8?e=derYaa)
+1. [Descripción del Producto](https://github.com/Ivanmagallona/App-Jur-dica-Laboral/blob/main/Documentos/Descripción%20del%20producto.md)
+2. [Usuarios y Cliente](https://github.com/Ivanmagallona/App-Jur-dica-Laboral/blob/main/Documentos/Usuarios%20y%20cliente.md)
+3. [Necesidad de la Aplicación y Propuesta de Valor (Justificación)](https://github.com/Ivanmagallona/App-Jur-dica-Laboral/blob/main/Documentos/Necesidad%20de%20la%20Aplicación%20y%20Propuesta%20de%20Valor%20(Justificación).md)
+4. [Contexto y Elicitación de Requisitos](https://github.com/Ivanmagallona/App-Jur-dica-Laboral/blob/main/Documentos/Contexto%20y%20Elicitación%20de%20Requisitos.md)
+5. [Requisitos Funcionales (RF) y Casos de Uso](https://github.com/Ivanmagallona/App-Jur-dica-Laboral/blob/main/Documentos/Requisitos%20Funcionales%20(RF)%20y%20Casos%20de%20Uso.md)
    * Casos de Uso
    * Historias de Usuario
-6. [Requisitos No Funcionales (RNF)](https://1drv.ms/t/c/3cb4d8e77e579dfe/IQDpb-3lSNHXRYrglXli5x-4Aceyfq3VLhXlIY3nhwE0EK8?e=siVeGR)
-7. [Priorización de Requisitos](https://1drv.ms/t/c/3cb4d8e77e579dfe/IQDIec-CmaYCSpOEKjkQjnk8AWMZRec3qMnn6YyKR1AYAZk?e=veaWwj)
-8. [Reglas de Negocio (RN)](https://1drv.ms/t/c/3cb4d8e77e579dfe/IQALWoJLpvFBQprjZZIpAbtPAX399x4ypSrh_rI21pAD8pI?e=Tifz9c)
+6. [Requisitos No Funcionales (RNF)](https://github.com/Ivanmagallona/App-Jur-dica-Laboral/blob/main/Documentos/Requisitos%20No%20Funcionales%20(RNF).md)
+7. [Priorización de Requisitos](https://github.com/Ivanmagallona/App-Jur-dica-Laboral/blob/main/Documentos/Priorización%20de%20Requisitos.md)
+8. [Reglas de Negocio (RN)](https://github.com/Ivanmagallona/App-Jur-dica-Laboral/blob/main/Documentos/Reglas%20de%20Negocio%20(RN).md)
 9. [Competencias](https://github.com/Ivanmagallona/App-Jur-dica-Laboral/blob/main/Documentos/Competencias.md)
    * Competencias Genéricas
    * Competencias Específicas
 10. [Evidencia y Presentación del Proyecto](https://youtu.be/jNzzQemtiDM)
     * Video Presentación
-11. [Tabla de Participación](https://1drv.ms/t/c/3cb4d8e77e579dfe/IQC8sEOFcOfyQIY0DmoXRXTIAXlw-6a5cv1BEtiuHY1ZTwY?e=rUWgrV)
+11. [Tabla de Participación](https://github.com/Ivanmagallona/App-Jur-dica-Laboral/blob/main/Documentos/Tabla%20de%20Participación.md)
 12. [Diagrama de flujo](https://1drv.ms/i/c/3cb4d8e77e579dfe/IQBM_8-xgWgwSrYJ_LenDSzEAd5f9U6FXXjmaDiHi4KQz9U?e=GXDaN0)
 
 ## 1. Descripción del Producto
