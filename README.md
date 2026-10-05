@@ -74,7 +74,7 @@ A través del desarrollo de esta app, se promueven las siguientes competencias, 
 ## 10. Evidencia y Presentación del Proyecto
 
 ### Video Presentación
-* [En el siguiente enlace se documenta la explicación y funcionamiento del proyecto:](https://youtu.be/jNzzQemtiDM)
+* En el siguiente enlace se documenta la explicación y funcionamiento del proyecto:[(https://youtu.be/jNzzQemtiDM)]
 
 ### Evidencia de reuniones y Tabla de Participación
 Se detalla el involucramiento y las tareas desarrolladas por cada integrante durante el ciclo de vida del proyecto:
