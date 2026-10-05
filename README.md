@@ -89,7 +89,7 @@ Se detalla el involucramiento y las tareas desarrolladas por cada integrante dur
 | Elberth Alberto Cortazar | Priorización de requisitos y Reglas de negocio | 10% |
 | Oscaldo Francisco Solís Medina | Competencias | 10% |
 
-### flowchart TD
+flowchart TD
     %% Estilos de Nodos
     classDef inicioFin fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#1b5e20,font-weight:bold;
     classDef menu fill:#bbdefb,stroke:#1565c0,stroke-width:2px,color:#0d47a1,font-weight:bold;
@@ -144,4 +144,3 @@ Se detalla el involucramiento y las tareas desarrolladas por cada integrante dur
 
     Disclaimer --> End
     End -.-> Menu
-    
