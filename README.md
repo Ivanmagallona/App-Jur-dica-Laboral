@@ -111,4 +111,4 @@ Se detalla el involucramiento y las tareas desarrolladas por cada integrante dur
 
 ## 11. Diagrama de flujo
 
-! [Diagrama de flujo](https://1drv.ms/i/c/3cb4d8e77e579dfe/IQBM_8-xgWgwSrYJ_LenDSzEAd5f9U6FXXjmaDiHi4KQz9U?e=884J3R) .
+[Diagrama de flujo](https://1drv.ms/i/c/3cb4d8e77e579dfe/IQBM_8-xgWgwSrYJ_LenDSzEAd5f9U6FXXjmaDiHi4KQz9U?e=GXDaN0).
