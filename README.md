@@ -81,7 +81,7 @@ Se detalla el involucramiento y las tareas desarrolladas por cada integrante dur
 
 | Nombre del Integrante | Rol / Actividad Principal | Participación (%) |
 | :--- | :--- | :---: |
-| Israel Vázquez Cortazar | Descripción del producto | 20% |
+| Israel Vázquez Cortazar | Repositorio y Descripción del producto | 20% |
 | Mauro Basilio Medina | Edición del video y administración de proyecto | 20% |
 | Iván Leonardo Magallón Arias | Repositorio, Requisitos Funcionales y casos de uso | 20% |
 | Abraham Isaí Caamal HAu | Usuarios y clientes | 10% |
