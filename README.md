@@ -12,7 +12,7 @@
 6. [Requisitos No Funcionales (RNF)](https://1drv.ms/t/c/3cb4d8e77e579dfe/IQDpb-3lSNHXRYrglXli5x-4Aceyfq3VLhXlIY3nhwE0EK8?e=siVeGR)
 7. [Priorización de Requisitos](https://1drv.ms/t/c/3cb4d8e77e579dfe/IQDIec-CmaYCSpOEKjkQjnk8AWMZRec3qMnn6YyKR1AYAZk?e=veaWwj)
 8. [Reglas de Negocio (RN)](https://1drv.ms/t/c/3cb4d8e77e579dfe/IQALWoJLpvFBQprjZZIpAbtPAX399x4ypSrh_rI21pAD8pI?e=Tifz9c)
-9. [Competencias](https://1drv.ms/t/c/3cb4d8e77e579dfe/IQDS3hNIrQvTSb5zeLHMbgiJAeBKJUlBZbwX7AfVg_1WvN8?e=LtFief)
+9. [Competencias](https://github.com/Ivanmagallona/App-Jur-dica-Laboral/blob/main/Documentos/Competencias.md)
    * Competencias Genéricas
    * Competencias Específicas
 10. [Evidencia y Presentación del Proyecto](https://youtu.be/jNzzQemtiDM)
