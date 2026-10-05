@@ -1,0 +1,5 @@
+## 8. Reglas de Negocio (RN)
+*Definición: Son las políticas, fundamentos legales o directrices que restringen y determinan la lógica con la que el sistema procesa la información para garantizar su validez y fiabilidad.*
+
+* **RN-01 (Base Legal):** Debido a que un software defectuoso o impreciso puede causar graves daños en el ámbito legal o financiero del usuario, todas las fórmulas matemáticas estarán estrictamente apegadas a los parámetros vigentes de la Ley Federal del Trabajo (LFT) y la jurisprudencia de México.
+* **RN-02 (Alertas Jurídicas):** El sistema integrará obligatoriamente un "Disclaimer" (descargo de responsabilidad). Este advertirá de manera clara que los resultados generados tienen fines informativos y preventivos, y que bajo ninguna circunstancia sustituyen el consejo formal de un abogado experto.

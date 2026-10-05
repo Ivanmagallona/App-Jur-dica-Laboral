@@ -1,0 +1,4 @@
+## 4. Contexto y Elicitación de Requisitos
+*Definición: Es la actividad inicial de comunicación donde, antes de comenzar cualquier trabajo técnico, se colabora con los usuarios para comprender sus objetivos y reunir los requerimientos del sistema.*
+
+Antes de definir la funcionalidad del software, es de importancia crítica comunicarse y colaborar con los participantes. Por ello, se colaboró con los usuarios objetivos mediante encuestas para entender sus necesidades reales frente a su primer empleo y así obtener requisitos no ambiguos. Esto justificó el diseño de módulos automatizados que respondieran a su falta de experiencia legal.
