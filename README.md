@@ -19,6 +19,7 @@
     * Video Presentación
 11. [Tabla de Participación](https://github.com/Ivanmagallona/App-Jur-dica-Laboral/blob/main/Documentos/Tabla%20de%20Participación.md)
 12. [Diagrama de flujo](https://1drv.ms/i/c/3cb4d8e77e579dfe/IQBM_8-xgWgwSrYJ_LenDSzEAd5f9U6FXXjmaDiHi4KQz9U?e=GXDaN0)
+13. [Bibliografía](https://github.com/Ivanmagallona/App-Jur-dica-Laboral/blob/main/Documentos/Bibliografía.md)
 
 ## 1. Descripción del Producto
 * **Objetivo:** Desarrollar una aplicación de software que brinde información, instrucciones y estructuras de cálculo automatizadas sobre derechos laborales, con el fin de orientar a los trabajadores en México y evitar abusos contractuales.
