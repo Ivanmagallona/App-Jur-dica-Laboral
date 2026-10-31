@@ -1,417 +1,1044 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>App Jurídica Laboral · Información y cálculos de derechos laborales en México</title>
-  <meta name="description" content="Página del proyecto App Jurídica Laboral: descripción, requisitos, reglas de negocio, equipo y evidencia. Información, instrucciones y cálculos automatizados sobre derechos laborales en México.">
-  <link rel="stylesheet" href="estilos.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="App Jurídica Laboral - Plataforma para el cálculo de liquidaciones, auditoría de contratos y asesoría en derecho laboral mexicano.">
+  <title>App Jurídica Laboral | Plataforma Legal</title>
+  
+  <!-- Tipografía moderna sans-serif -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Hoja de estilos -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
-
-  <header class="encabezado">
-    <div class="contenedor encabezado-interno">
-      <a class="marca" href="#inicio">
-        <span class="marca-icono" aria-hidden="true">§</span>
-        <span class="marca-texto">App Jurídica&nbsp;Laboral</span>
+  <!-- ========================================================================= -->
+  <!-- HEADER Y NAVEGACIÓN GLOBAL                                                -->
+  <!-- ========================================================================= -->
+  <header class="site-header" id="header">
+    <div class="header-container">
+      
+      <!-- Logo y Título -->
+      <a href="#inicio" class="brand" data-screen-target="inicio" aria-label="Ir al Inicio">
+        <div class="brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3v18"></path>
+            <path d="m3 7 9-3 9 3"></path>
+            <path d="M6 7l-3 7h6l-3-7z"></path>
+            <path d="M18 7l-3 7h6l-3-7z"></path>
+            <path d="M4 21h16"></path>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">App Jurídica Laboral</span>
+          <span class="brand-tag">Soluciones Legales</span>
+        </div>
       </a>
-      <nav class="nav" aria-label="Secciones de la página">
-        <ul>
-          <li><a href="#descripcion">Descripción</a></li>
-          <li><a href="#usuarios">Usuarios</a></li>
-          <li><a href="#justificacion">Justificación</a></li>
-          <li><a href="#contexto">Contexto</a></li>
-          <li><a href="#requisitos">Requisitos</a></li>
-          <li><a href="#rnf">No funcionales</a></li>
-          <li><a href="#priorizacion">Priorización</a></li>
-          <li><a href="#reglas">Reglas</a></li>
-          <li><a href="#competencias">Competencias</a></li>
-          <li><a href="#equipo">Equipo</a></li>
-          <li><a href="#evidencia">Evidencia</a></li>
-          <li><a href="#bibliografia">Bibliografía</a></li>
+
+      <!-- Botón Menú Móvil -->
+      <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+
+      <!-- Menú de Navegación Interactivo (5 Pantallas) -->
+      <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <button type="button" class="nav-btn active" data-screen-target="inicio">
+              Inicio
+            </button>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="nav-btn" data-screen-target="usuarios">
+              Usuarios
+            </button>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="nav-btn" data-screen-target="modulos">
+              Módulos
+            </button>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="nav-btn" data-screen-target="reglas">
+              Normativa
+            </button>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="nav-btn nav-btn-highlight" data-screen-target="simulador">
+              <span class="pulse-dot"></span>
+              Simulador
+            </button>
+          </li>
         </ul>
       </nav>
+
     </div>
   </header>
 
-  <main id="contenido">
+  <!-- ========================================================================= -->
+  <!-- CONTENEDOR PRINCIPAL: PANTALLAS INDEPENDIENTES (SPA)                      -->
+  <!-- ========================================================================= -->
+  <main id="mainContent" class="screens-viewport">
 
-    <!-- Portada -->
-    <section class="portada" id="inicio">
-      <div class="contenedor portada-interno">
-        <p class="echape">Proyecto de Ingeniería de Software · México</p>
-        <h1>App Jurídica Laboral</h1>
-        <p class="portada-lead">
-          Información, instrucciones y estructuras de cálculo automatizadas sobre
-          derechos laborales, con el fin de orientar a los trabajadores en México
-          y evitar abusos contractuales.
-        </p>
-        <div class="portada-acciones">
-          <a class="boton boton-primario" href="https://youtu.be/jNzzQemtiDM" target="_blank" rel="noopener">Ver video de presentación</a>
-          <a class="boton boton-secundario" href="https://github.com/Ivanmagallona/App-Jur-dica-Laboral" target="_blank" rel="noopener">Ver repositorio</a>
-        </div>
-        <ul class="portada-datos" aria-label="Datos destacados">
-          <li><strong>5</strong><span>Requisitos funcionales</span></li>
-          <li><strong>4</strong><span>Requisitos no funcionales</span></li>
-          <li><strong>7</strong><span>Integrantes</span></li>
-          <li><strong>0</strong><span>Datos personales almacenados</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- 1. Descripción del producto -->
-    <section class="seccion" id="descripcion">
-      <div class="contenedor">
-        <p class="seccion-numero">1</p>
-        <h2>Descripción del Producto</h2>
-        <div class="rejilla-3">
-          <article class="tarjeta">
-            <h3>Objetivo</h3>
-            <p>Desarrollar una aplicación de software que brinde información, instrucciones y estructuras de cálculo automatizadas sobre derechos laborales, con el fin de orientar a los trabajadores en México y evitar abusos contractuales.</p>
-          </article>
-          <article class="tarjeta">
-            <h3>Alcance</h3>
-            <p>El sistema abarcará el cálculo preciso de proporciones de aguinaldo, prima vacacional, diferencias entre finiquito y liquidación, la evaluación de contratos mediante cuestionarios interactivos, y la generación de documentos legales en formato PDF.</p>
-          </article>
-          <article class="tarjeta tarjeta-advertencia">
-            <h3>Limitaciones</h3>
-            <p>La aplicación es estrictamente informativa y de orientación preventiva; no almacenará información en bases de datos externas y no sustituirá el consejo formal de un abogado laboral.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- 2. Usuarios y cliente -->
-    <section class="seccion seccion-alterna" id="usuarios">
-      <div class="contenedor">
-        <p class="seccion-numero">2</p>
-        <h2>Usuarios y Cliente</h2>
-        <div class="rejilla-3">
-          <article class="tarjeta">
-            <h3>Usuarios primarios</h3>
-            <p>Estudiantes universitarios de último año y profesionales recién egresados que se enfrentan a su primer empleo formal.</p>
-          </article>
-          <article class="tarjeta">
-            <h3>Usuarios secundarios</h3>
-            <p>Trabajadores jóvenes en general que necesiten auditar sus condiciones laborales actuales.</p>
-          </article>
-          <article class="tarjeta">
-            <h3>Perfiles y escenarios</h3>
-            <p>Jóvenes expuestos a un alto riesgo de daño económico por desinformación (firmas de pagarés en blanco, renuncias forzadas, simulación de honorarios) que necesitan una herramienta accesible en un entorno de alto estrés laboral.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. Necesidad y propuesta de valor -->
-    <section class="seccion" id="justificacion">
-      <div class="contenedor">
-        <p class="seccion-numero">3</p>
-        <h2>Necesidad de la Aplicación y Propuesta de Valor</h2>
-        <p class="seccion-definicion">Este apartado describe el propósito principal y la razón de ser del sistema, demostrando cómo resuelve un problema real y aporta beneficios directos al usuario.</p>
-        <ul class="lista-puntos">
-          <li>Todo sistema de software existe por una sola razón: para proporcionar valor a sus usuarios.</li>
-          <li>Los estudiantes y recién egresados, en especial los ingenieros que inician su primer trabajo formal, enfrentan un alto riesgo de vulnerabilidad financiera por desconocimiento de las leyes. Esta aplicación surge para ofrecer protección legal y económica al sector de nuevos profesionistas.</li>
-          <li>Aplicando el principio fundamental de la ingeniería de software de «entender el problema» antes de plantear o construir una solución, se determinó que, a diferencia de leer la extensa Ley Federal del Trabajo, los usuarios necesitan una herramienta que entregue cálculos exactos inmediatos y detecte riesgos de forma interactiva.</li>
-          <li>Al funcionar a través de estructuras de datos e información descriptiva, la app salvaguarda la privacidad total del usuario (al no requerir registros de datos personales) mientras lo empodera para tomar decisiones seguras.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- 4. Contexto y elicitation -->
-    <section class="seccion seccion-alterna" id="contexto">
-      <div class="contenedor">
-        <p class="seccion-numero">4</p>
-        <h2>Contexto y Elicitación de Requisitos</h2>
-        <p class="seccion-definicion">Es la actividad inicial de comunicación donde, antes de comenzar cualquier trabajo técnico, se colabora con los usuarios para comprender sus objetivos y reunir los requerimientos del sistema.</p>
-        <p>Antes de definir la funcionalidad del software, es de importancia crítica comunicarse y colaborar con los participantes. Por ello, se colaboró con los usuarios objetivos mediante encuestas para entender sus necesidades reales frente a su primer empleo y así obtener requisitos no ambiguos. Esto justificó el diseño de módulos automatizados que respondieran a su falta de experiencia legal.</p>
-      </div>
-    </section>
-
-    <!-- 5. Requisitos funcionales -->
-    <section class="seccion" id="requisitos">
-      <div class="contenedor">
-        <p class="seccion-numero">5</p>
-        <h2>Requisitos Funcionales, Casos de Uso e Historias de Usuario</h2>
-        <p class="seccion-definicion">Son las instrucciones o programas de computadora que, al ser ejecutadas, proporcionan las características, las funciones y el desempeño específicos deseados por el usuario.</p>
-
-        <ul class="rejilla-2 lista-requisitos">
-          <li class="tarjeta">
-            <p class="etiqueta">RF-01 · Módulo de Cálculo</p>
-            <p>El programa procesará los datos de entrada proporcionados por el usuario (salario, fechas de inicio y término) para calcular con exactitud la proporción de aguinaldo y prima vacacional.</p>
-          </li>
-          <li class="tarjeta">
-            <p class="etiqueta">RF-02 · Finiquito vs. Liquidación</p>
-            <p>El sistema ejecutará las operaciones matemáticas necesarias para calcular y desglosar la diferencia económica exacta entre una renuncia voluntaria y un despido injustificado.</p>
-          </li>
-          <li class="tarjeta">
-            <p class="etiqueta">RF-03 · Auditor de Contratos</p>
-            <p>El sistema proporcionará una función de cuestionario interactivo («Semáforo de Riesgo») para analizar las respuestas del usuario y detectar anomalías contractuales o cláusulas ilegales.</p>
-          </li>
-          <li class="tarjeta">
-            <p class="etiqueta">RF-04 · Ruta Procesal</p>
-            <p>La aplicación integrará una característica visual que mostrará un flujograma interactivo para guiar paso a paso al usuario a través de las etapas del proceso laboral mexicano.</p>
-          </li>
-          <li class="tarjeta">
-            <p class="etiqueta">RF-05 · Generación de Documentos</p>
-            <p>El sistema permitirá la autocompletación algorítmica y la descarga de plantillas legales estructuradas en formato PDF.</p>
-          </li>
-        </ul>
-
-        <div class="rejilla-2 bloques-secundarios">
-          <div>
-            <h3>Casos de uso</h3>
-            <ul class="lista-puntos">
-              <li><strong>CU-01 (Calcular Prestaciones):</strong> El usuario ingresa sus datos salariales y fechas de empleo. El sistema valida los datos, aplica las fórmulas de la ley y muestra un desglose económico detallado en pantalla.</li>
-              <li><strong>CU-02 (Auditar Contrato):</strong> El usuario responde preguntas de opción múltiple sobre su contratación. El sistema analiza las respuestas y alerta sobre cláusulas ilegales (ej. renuncia anticipada).</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Historias de usuario</h3>
-            <ul class="lista-puntos">
-              <li><strong>HU-01:</strong> Como recién egresado, quiero ingresar mi fecha de entrada y salida para que la app me diga exactamente cuánto me toca de finiquito.</li>
-              <li><strong>HU-02:</strong> Como usuario sin conocimientos legales, quiero ver un diagrama paso a paso para que pueda entender cómo es un proceso de conciliación prejudicial.</li>
-              <li><strong>HU-03:</strong> Como trabajador despedido, quiero llenar un formulario rápido para que el sistema genere un PDF de solicitud de citatorio listo para imprimir.</li>
-            </ul>
+    <!-- ======================================================================= -->
+    <!-- PANTALLA 1: INICIO Y PROPUESTA DE VALOR                                 -->
+    <!-- ======================================================================= -->
+    <section class="screen active" id="screen-inicio" data-screen="inicio" aria-labelledby="heroTitle">
+      <div class="container">
+        
+        <!-- Hero Header Conciso -->
+        <div class="hero-header text-center">
+          <div class="badge-pill">LegalTech Laboral</div>
+          <h1 class="hero-title" id="heroTitle">Certeza Jurídica y Cómputo Laboral Transparente</h1>
+          <p class="hero-subtitle">
+            Digitalización ágil de trámites, cálculo fidedigno de indemnizaciones y acompañamiento legal conforme a la Ley Federal del Trabajo.
+          </p>
+          
+          <div class="hero-actions">
+            <button type="button" class="btn btn-primary" data-screen-target="simulador">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                <line x1="8" y1="6" x2="16" y2="6"></line>
+                <line x1="16" y1="14" x2="16" y2="18"></line>
+              </svg>
+              Calcular Liquidación
+            </button>
+            <button type="button" class="btn btn-secondary" data-screen-target="modulos">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+              Ver Módulos
+            </button>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- 6. Requisitos no funcionales -->
-    <section class="seccion seccion-alterna" id="rnf">
-      <div class="contenedor">
-        <p class="seccion-numero">6</p>
-        <h2>Requisitos No Funcionales</h2>
-        <p class="seccion-definicion">Son las restricciones, atributos de calidad y características técnicas que garantizan que el software sea seguro, confiable y trabaje con eficiencia en las plataformas de los usuarios.</p>
-        <div class="rejilla-2 lista-requisitos">
-          <article class="tarjeta">
-            <p class="etiqueta">RNF-01 · Privacidad y Seguridad</p>
-            <p>El sistema no requerirá registro ni almacenará datos personales o empresariales en bases externas, ejecutando todo el procesamiento de manera local y segura.</p>
-          </article>
-          <article class="tarjeta">
-            <p class="etiqueta">RNF-02 · Usabilidad (UX)</p>
-            <p>Siguiendo el principio de diseño «Mantenlo simple, estúpido» (KISS), la interfaz sustituirá los tecnicismos legales por un lenguaje pedagógico, garantizando un diseño sencillo e intuitivo, creado con la consciencia de que usuarios no expertos consumirán el producto.</p>
-          </article>
-          <article class="tarjeta">
-            <p class="etiqueta">RNF-03 · Accesibilidad</p>
-            <p>La plataforma será <em>responsive</em> (adaptable), asegurando que funcione eficientemente en diversas máquinas reales, tanto en computadoras de escritorio como en dispositivos móviles.</p>
-          </article>
-          <article class="tarjeta">
-            <p class="etiqueta">RNF-04 · Desempeño</p>
-            <p>Para asegurar un funcionamiento eficiente en las operaciones críticas, los algoritmos de cálculo y la generación de documentos PDF deberán completarse en un tiempo de respuesta menor a 3 segundos.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- 7. Priorización -->
-    <section class="seccion" id="priorizacion">
-      <div class="contenedor">
-        <p class="seccion-numero">7</p>
-        <h2>Priorización de Requisitos</h2>
-        <p>Para evaluar la factibilidad e importancia del proyecto, los requisitos se priorizaron utilizando el método de valor:</p>
-        <div class="rejilla-3">
-          <article class="tarjeta prioridad-alta">
-            <h3>Alta <span>(críticos)</span></h3>
-            <p>Módulo de cálculo (RF-01, RF-02), Base Legal (RN-01), Privacidad de datos (RNF-01) y Descargos de responsabilidad (RN-02). Son indispensables para la primera iteración funcional.</p>
-          </article>
-          <article class="tarjeta prioridad-media">
-            <h3>Media <span>(importantes)</span></h3>
-            <p>Auditor de contratos (RF-03) y Generación de PDF (RF-05).</p>
-          </article>
-          <article class="tarjeta prioridad-baja">
-            <h3>Baja <span>(deseables)</span></h3>
-            <p>Ruta Procesal (RF-04) y optimización avanzada de UX (RNF-02).</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- 8. Reglas de negocio -->
-    <section class="seccion seccion-alterna" id="reglas">
-      <div class="contenedor">
-        <p class="seccion-numero">8</p>
-        <h2>Reglas de Negocio</h2>
-        <p class="seccion-definicion">Son las políticas, fundamentos legales o directrices que restringen y determinan la lógica con la que el sistema procesa la información para garantizar su validez y fiabilidad.</p>
-        <div class="rejilla-2 lista-requisitos">
-          <article class="tarjeta">
-            <p class="etiqueta">RN-01 · Base Legal</p>
-            <p>Debido a que un software defectuoso o impreciso puede causar graves daños en el ámbito legal o financiero del usuario, todas las fórmulas matemáticas estarán estrictamente apegadas a los parámetros vigentes de la Ley Federal del Trabajo (LFT) y la jurisprudencia de México.</p>
-          </article>
-          <article class="tarjeta tarjeta-advertencia">
-            <p class="etiqueta">RN-02 · Alertas Jurídicas</p>
-            <p>El sistema integrará obligatoriamente un «Disclaimer» (descargo de responsabilidad). Este advertirá de manera clara que los resultados generados tienen fines informativos y preventivos, y que bajo ninguna circunstancia sustituyen el consejo formal de un abogado experto.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- 9. Competencias -->
-    <section class="seccion" id="competencias">
-      <div class="contenedor">
-        <p class="seccion-numero">9</p>
-        <h2>Competencias</h2>
-        <p>A través del desarrollo de esta app, se promueven las siguientes competencias, tomando en cuenta el conocimiento (saber qué), la habilidad (saber cómo) y las disposiciones (saber por qué):</p>
-        <div class="rejilla-3">
-          <article class="tarjeta">
-            <h3>Genérica</h3>
-            <p class="etiqueta">Pensamiento Analítico y Crítico</p>
-            <p>Se fomenta al simplificar información legal compleja en partes básicas y procesar fórmulas abstractas para que el sistema tome decisiones precisas al arrojar un cálculo económico.</p>
-          </article>
-          <article class="tarjeta">
-            <h3>Específica</h3>
-            <p class="etiqueta">Ingeniería de Requisitos</p>
-            <p>Capacidad demostrada para analizar y presentar un problema complejo, interactuando con los usuarios finales para obtener requisitos claros y convertirlos en componentes funcionales.</p>
-          </article>
-          <article class="tarjeta">
-            <h3>Específica</h3>
-            <p class="etiqueta">Garantía de Calidad (QA)</p>
-            <p>Aplicación de métricas de rendimiento e identificación de riesgos y defectos legales/técnicos en el flujo de la aplicación.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- 11. Equipo / Tabla de participación -->
-    <section class="seccion seccion-alterna" id="equipo">
-      <div class="contenedor">
-        <p class="seccion-numero">11</p>
-        <h2>Equipo y Tabla de Participación</h2>
-        <p>Se detalla el involucramiento y las tareas desarrolladas por cada integrante durante el ciclo de vida del proyecto:</p>
-
-        <div class="tabla-contenedor">
-          <table>
-            <caption class="oculto">Participación de cada integrante del proyecto</caption>
-            <thead>
-              <tr>
-                <th scope="col">Integrante</th>
-                <th scope="col">Rol / Actividad principal</th>
-                <th scope="col" class="num">Participación</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Israel Vázquez Cortazar</td>
-                <td>Repositorio y Descripción del producto</td>
-                <td class="num">20%</td>
-              </tr>
-              <tr>
-                <td>Mauro Basilio Medina</td>
-                <td>Edición del video y Repositorio</td>
-                <td class="num">20%</td>
-              </tr>
-              <tr>
-                <td>Iván Leonardo Magallón Arias</td>
-                <td>Repositorio, Requisitos Funcionales y casos de uso</td>
-                <td class="num">20%</td>
-              </tr>
-              <tr>
-                <td>Abraham Isaí Caamal Hau</td>
-                <td>Usuarios y clientes</td>
-                <td class="num">10%</td>
-              </tr>
-              <tr>
-                <td>Roberto Quintal Martinez</td>
-                <td>Requisitos no funcionales</td>
-                <td class="num">10%</td>
-              </tr>
-              <tr>
-                <td>Elberth Alberto Cortazar</td>
-                <td>Priorización de requisitos y Reglas de negocio</td>
-                <td class="num">10%</td>
-              </tr>
-              <tr>
-                <td>Osvaldo Francisco Solís Medina</td>
-                <td>Competencias</td>
-                <td class="num">10%</td>
-              </tr>
-            </tbody>
-          </table>
+        <!-- Métricas Rápidas y Compactas -->
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <span class="metric-value">100%</span>
+            <span class="metric-label">Apegado a la LFT</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-value">&lt; 2 seg</span>
+            <span class="metric-label">Cálculo Instantáneo</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-value">3 Roles</span>
+            <span class="metric-label">Trabajador, Abogado y Empresa</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-value">24/7</span>
+            <span class="metric-label">Acceso en Línea</span>
+          </div>
         </div>
 
-        <h3>Perfil del equipo</h3>
-        <article class="tarjeta perfil">
-          <p class="etiqueta">Integrante</p>
-          <h4>Iván Leonardo Magallón Arias</h4>
-          <p class="perfil-titulo">Abogado Especialista en Derecho Laboral, Seguridad Social y Amparo</p>
-
-          <h5>Sobre mí</h5>
-          <p>Con una sólida formación jurídica y una profunda convicción por la protección de los derechos humanos y patrimoniales, ofrezco una representación legal caracterizada por el rigor técnico, la ética y la innovación. Como Maestro en Derecho Constitucional y Amparo, diseño estrategias de litigio eficaces para resolver controversias complejas, garantizando en todo momento la certeza jurídica y la transparencia hacia mis clientes.</p>
-          <p>Mi visión del Derecho es integral e internacional. Combino el control convencional y la argumentación jurídica de alto nivel para hacer frente a los retos legales contemporáneos, priorizando soluciones prácticas y definitivas.</p>
-
-          <h5>Experiencia y práctica destacada</h5>
-          <p><strong>Litigio internacional y recuperación de fondos de seguridad social.</strong> Como titular de mi propia firma legal, he desarrollado un nicho de especialidad en el derecho laboral y la seguridad social internacional. Represento con éxito a trabajadores extranjeros —con especial énfasis en la comunidad de expatriados japoneses que retornan a su país— ante los tribunales laborales federales. Mi labor se centra en la demanda y recuperación efectiva de fondos de ahorro acumulados en subcuentas de AFORE e INFONAVIT, sorteando la burocracia institucional mediante amparos y recursos estratégicos para proteger el patrimonio de mis representados.</p>
-          <p><strong>Innovación y «LegalTech» en el Derecho Laboral.</strong> Comprendo que el ejercicio del Derecho debe evolucionar. Por ello, lidero el diseño y desarrollo de software especializado, como la App Jurídica Laboral, una herramienta tecnológica orientada a la auditoría de riesgos de contratos, cálculo automatizado de finiquitos y liquidaciones, y generación de rutas procesales interactivas. Esta integración de tecnología y derecho me permite ofrecer a mis clientes un servicio más rápido, preciso y moderno.</p>
-          <p><strong>Procuración de justicia y administración pública.</strong> Mi trayectoria incluye roles de liderazgo en el sector público, destacando mi gestión como Jefe de Departamento de Constancias de No Antecedentes Penales en la Fiscalía General del Estado de Morelos. Durante mi encargo, no solo administré sucursales a nivel estatal y brindé atención directa en amparos, sino que además impulsé políticas de inclusión pioneras, como la implementación de atención en Lengua de Señas Mexicana.</p>
-          <p><strong>Excelencia en litigación oral.</strong> Cuento con habilidades sobresalientes en la estructuración de la teoría del caso y la argumentación en audiencias. Fui capitán del equipo de litigación oral y obtuve el 1º lugar en el Concurso Regional de Juicio Oral ABA ROLI, donde además fui galardonado con el reconocimiento al «Mejor Alegato de Clausura».</p>
-
-          <h5>Formación académica</h5>
-          <ul class="lista-puntos">
-            <li><strong>Maestría en Derecho Constitucional y Amparo</strong> – Especialista en el impacto del marco constitucional en la defensa de derechos.</li>
-            <li><strong>Licenciatura en Derecho</strong> – Con experiencia académica internacional en la Universidad Mayor (Santiago de Chile).</li>
-            <li><strong>Atención bilingüe</strong> – Dominio avanzado del idioma inglés, lo que me permite brindar asesoría clara y sin barreras a clientes y corporativos extranjeros.</li>
-          </ul>
-
-          <h5>¿Por qué elegirme?</h5>
-          <p>Mi compromiso es tu tranquilidad. Ya sea que represente a un trabajador en la recuperación de los ahorros de toda su vida laboral en México o asesore en temas complejos de amparo, mi enfoque se rige por la honestidad, la precisión técnica y una comunicación transparente en cada etapa del proceso.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- 10 + 12. Evidencia y diagrama -->
-    <section class="seccion" id="evidencia">
-      <div class="contenedor">
-        <p class="seccion-numero">10 y 12</p>
-        <h2>Evidencia, Presentación y Diagrama de Flujo</h2>
-
-        <div class="rejilla-2">
-          <article class="tarjeta">
-            <h3>Video presentación</h3>
-            <p>En el siguiente enlace se documenta la explicación y funcionamiento del proyecto.</p>
-            <p><a class="boton boton-primario" href="https://youtu.be/jNzzQemtiDM" target="_blank" rel="noopener">Reproducir video (YouTube)</a></p>
+        <!-- Tarjetas Resumidas en Grid de 3 Columnas (Información Sintetizada) -->
+        <div class="features-summary-grid mt-4">
+          
+          <article class="feature-card">
+            <div class="card-icon-header">
+              <div class="icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                </svg>
+              </div>
+              <h3 class="card-title">Solución Digital</h3>
+            </div>
+            <p class="card-text">
+              Digitalización de trámites, expedientes y conciliaciones con fórmulas oficiales automatizadas.
+            </p>
+            <details class="card-expandable">
+              <summary>Ver más información</summary>
+              <div class="expandable-body">
+                Facilita la comunicación entre trabajadores, defensores y áreas de capital humano para evitar controversias prolongadas.
+              </div>
+            </details>
           </article>
-          <article class="tarjeta">
-            <h3>Diagrama de flujo</h3>
-            <p>Diagrama de flujo del proceso de la aplicación, disponible también en el enlace del equipo.</p>
-            <p><a class="boton boton-secundario" href="https://1drv.ms/i/c/3cb4d8e77e579dfe/IQBM_8-xgWgwSrYJ_LenDSzEAd5f9U6FXXjmaDiHi4KQz9U?e=GXDaN0" target="_blank" rel="noopener">Abrir diagrama en OneDrive</a></p>
+
+          <article class="feature-card">
+            <div class="card-icon-header">
+              <div class="icon-box icon-box-alert">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="8" x2="12" y2="12"></line>
+                  <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+              </div>
+              <h3 class="card-title">Problemática</h3>
+            </div>
+            <p class="card-text">
+              Elimina la opacidad y el desconocimiento de prestaciones que provocan pérdidas económicas al trabajador.
+            </p>
+            <details class="card-expandable">
+              <summary>Ver más información</summary>
+              <div class="expandable-body">
+                Resuelve la dispersión de expedientes físicos y retrasos críticos en el seguimiento de demandas laborales.
+              </div>
+            </details>
           </article>
+
+          <article class="feature-card">
+            <div class="card-icon-header">
+              <div class="icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <h3 class="card-title">Propuesta de Valor</h3>
+            </div>
+            <p class="card-text">
+              Transparencia matemática inmediata y contratos auditados para dar certeza jurídica a ambas partes.
+            </p>
+            <details class="card-expandable">
+              <summary>Ver más información</summary>
+              <div class="expandable-body">
+                Acceso a plantillas legales estandarizadas y flujograma de conciliación sin intermediarios innecesarios.
+              </div>
+            </details>
+          </article>
+
         </div>
 
-        <figure class="diagrama">
-          <img src="Diagrama de flujo.jpg" alt="Diagrama de flujo del proceso de la App Jurídica Laboral" loading="lazy" width="2816" height="1536">
-          <figcaption>Diagrama de flujo del proyecto (archivo <code>Diagrama de flujo.jpg</code> del repositorio).</figcaption>
-        </figure>
       </div>
     </section>
 
-    <!-- 13. Bibliografía -->
-    <section class="seccion seccion-alterna" id="bibliografia">
-      <div class="contenedor">
-        <p class="seccion-numero">13</p>
-        <h2>Bibliografía</h2>
-        <ul class="lista-puntos">
-          <li>Chacon, S., &amp; Straub, B. (2021). <em>Pro Git</em> (2ª ed.). Apress.</li>
-        </ul>
+    <!-- ======================================================================= -->
+    <!-- PANTALLA 2: USUARIOS Y CONTEXTO                                         -->
+    <!-- ======================================================================= -->
+    <section class="screen" id="screen-usuarios" data-screen="usuarios" aria-labelledby="usuariosTitle">
+      <div class="container">
+        
+        <header class="section-heading text-center">
+          <span class="badge-pill">Perfiles de Usuario</span>
+          <h2 class="section-title" id="usuariosTitle">Ecosistema y Atención Personalizada</h2>
+          <p class="section-description">
+            Herramientas adaptadas a las necesidades específicas de cada participante en la relación laboral.
+          </p>
+        </header>
+
+        <!-- Filtros Rápidos -->
+        <div class="subtabs-bar" role="tablist" aria-label="Filtro de perfiles">
+          <button type="button" class="subtab-btn active" data-user-filter="all" role="tab" aria-selected="true">
+            Todos (3)
+          </button>
+          <button type="button" class="subtab-btn" data-user-filter="trabajador" role="tab" aria-selected="false">
+            Trabajador
+          </button>
+          <button type="button" class="subtab-btn" data-user-filter="abogado" role="tab" aria-selected="false">
+            Abogado
+          </button>
+          <button type="button" class="subtab-btn" data-user-filter="empleador" role="tab" aria-selected="false">
+            Empresa / RRHH
+          </button>
+        </div>
+
+        <!-- Tarjetas Compactas de Perfiles -->
+        <div class="users-grid" id="usersCardsGrid">
+          
+          <article class="user-card" data-user-type="trabajador">
+            <div class="user-card-badge">Empleado</div>
+            <div class="user-icon-container">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <h3 class="user-name">Trabajador</h3>
+            <span class="user-role-label">Sujeto Protegido</span>
+            <p class="user-desc">
+              Cálculo honesto de liquidaciones, auditoría de cláusulas abusivas y conocimiento claro de sus derechos.
+            </p>
+            <div class="user-features-list">
+              <span class="user-chip">Cálculo de Finiquito</span>
+              <span class="user-chip">Auditor de Contrato</span>
+              <span class="user-chip">Guía Procesal</span>
+            </div>
+          </article>
+
+          <article class="user-card user-card-highlight" data-user-type="abogado">
+            <div class="user-card-badge">Litigante</div>
+            <div class="user-icon-container">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </div>
+            <h3 class="user-name">Abogado Laboralista</h3>
+            <span class="user-role-label">Especialista Legal</span>
+            <p class="user-desc">
+              Automatización de pretensiones numéricas, gestión de audiencias y emisión de demandas laborales.
+            </p>
+            <div class="user-features-list">
+              <span class="user-chip">Gestión de Casos</span>
+              <span class="user-chip">Generador de Escritos</span>
+              <span class="user-chip">Cómputo Procesal</span>
+            </div>
+          </article>
+
+          <article class="user-card" data-user-type="empleador">
+            <div class="user-card-badge">Corporativo</div>
+            <div class="user-icon-container">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 21h18"></path>
+                <path d="M9 8h1"></path>
+                <path d="M9 12h1"></path>
+                <path d="M9 16h1"></path>
+                <path d="M14 8h1"></path>
+                <path d="M14 12h1"></path>
+                <path d="M14 16h1"></path>
+                <path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"></path>
+              </svg>
+            </div>
+            <h3 class="user-name">Empresa / RRHH</h3>
+            <span class="user-role-label">Capital Humano</span>
+            <p class="user-desc">
+              Finiquitos conformes a derecho, prevención de contingencias y apego estricto a las normas laborales.
+            </p>
+            <div class="user-features-list">
+              <span class="user-chip">Convenios Legales</span>
+              <span class="user-chip">Prevención de Litigios</span>
+              <span class="user-chip">Compliance</span>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Panel de Metodología Oculto por Defecto (Reduce exceso de información) -->
+        <div class="collapsible-info-wrapper mt-4">
+          <button type="button" class="btn btn-secondary btn-sm" id="btnToggleContext">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            <span id="toggleContextText">Ver Fundamentación Legal y Metodológica</span>
+          </button>
+
+          <div class="context-panel collapsed" id="contextPanelContent">
+            <div class="elicitacion-grid">
+              <div class="elicitacion-item">
+                <div class="elicitacion-num">01</div>
+                <div>
+                  <h4 class="elicitacion-item-title">Consulta a Litigantes</h4>
+                  <p class="elicitacion-item-desc">Talleres con más de 25 abogados para optimizar los tiempos de cálculo de acuerdos.</p>
+                </div>
+              </div>
+              <div class="elicitacion-item">
+                <div class="elicitacion-num">02</div>
+                <div>
+                  <h4 class="elicitacion-item-title">Encuestas a Empleados</h4>
+                  <p class="elicitacion-item-desc">Mapeo de dudas frecuentes en terminación laboral para simplificar los conceptos.</p>
+                </div>
+              </div>
+              <div class="elicitacion-item">
+                <div class="elicitacion-num">03</div>
+                <div>
+                  <h4 class="elicitacion-item-title">Marco Legal Vigente</h4>
+                  <p class="elicitacion-item-desc">Alineación estricta con la LFT y jurisprudencias de la Suprema Corte de Justicia.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- PANTALLA 3: MÓDULOS OPERATIVOS                                          -->
+    <!-- ======================================================================= -->
+    <section class="screen" id="screen-modulos" data-screen="modulos" aria-labelledby="modulosTitle">
+      <div class="container">
+        
+        <header class="section-heading text-center">
+          <span class="badge-pill">Herramientas Operativas</span>
+          <h2 class="section-title" id="modulosTitle">Módulos Especializados</h2>
+          <p class="section-description">
+            Herramientas interactivas de cálculo, auditoría contractual, guía procesal y generación de documentos.
+          </p>
+        </header>
+
+        <!-- Pestañas de los 5 Módulos -->
+        <div class="tabs-nav" role="tablist" aria-label="Módulos funcionales">
+          <button type="button" class="tab-btn active" data-tool-tab="calculo" role="tab" aria-selected="true" id="tabBtnCalculo">
+            Prestaciones
+          </button>
+          <button type="button" class="tab-btn" data-tool-tab="comparador" role="tab" aria-selected="false" id="tabBtnComparador">
+            Comparador
+          </button>
+          <button type="button" class="tab-btn" data-tool-tab="auditor" role="tab" aria-selected="false" id="tabBtnAuditor">
+            Auditor
+          </button>
+          <button type="button" class="tab-btn" data-tool-tab="ruta" role="tab" aria-selected="false" id="tabBtnRuta">
+            Ruta Procesal
+          </button>
+          <button type="button" class="tab-btn" data-tool-tab="documentos" role="tab" aria-selected="false" id="tabBtnDocumentos">
+            Documentos
+          </button>
+        </div>
+
+        <!-- MÓDULO 1: CÁLCULO DE PRESTACIONES -->
+        <div class="tool-pane active" id="pane-calculo" role="tabpanel" aria-labelledby="tabBtnCalculo">
+          <div class="tool-hero-box">
+            <div class="mini-tool-grid">
+              
+              <div class="mini-tool-form">
+                <h4 class="mini-form-title">Cálculo de Aguinaldo y Vacaciones</h4>
+                
+                <div class="form-group">
+                  <label for="prestacionesSalary" class="form-label">Sueldo Mensual ($ MXN)</label>
+                  <div class="input-prefix-wrapper">
+                    <span class="input-currency">$</span>
+                    <input type="number" id="prestacionesSalary" class="form-control" value="18000" min="1000" step="500">
+                  </div>
+                </div>
+
+                <div class="form-group-row">
+                  <div class="form-group">
+                    <label for="diasLaboradosAno" class="form-label">Días Laborados en el Año</label>
+                    <input type="number" id="diasLaboradosAno" class="form-control" value="180" min="1" max="365">
+                  </div>
+                  <div class="form-group">
+                    <label for="diasVacacionesDerecho" class="form-label">Días Vacaciones (Ley)</label>
+                    <input type="number" id="diasVacacionesDerecho" class="form-control" value="12" min="12" max="32">
+                  </div>
+                </div>
+
+                <button type="button" class="btn btn-primary btn-block" id="btnCalcularPrestaciones">
+                  Calcular Proporciones
+                </button>
+              </div>
+
+              <div class="mini-tool-results">
+                <div class="result-metric-box">
+                  <span class="result-metric-label">Total Prestaciones Proporcionales:</span>
+                  <div class="result-metric-val" id="dispTotalPrestaciones">$6,698.63 MXN</div>
+                </div>
+
+                <div class="prestaciones-details-list">
+                  <div class="prestacion-item">
+                    <span class="prestacion-name">Salario Diario</span>
+                    <span class="prestacion-val" id="dispSalarioDiario">$600.00</span>
+                  </div>
+                  <div class="prestacion-item">
+                    <span class="prestacion-name">Aguinaldo Proporcional (15 días base)</span>
+                    <span class="prestacion-val" id="dispAguinaldoVal">$4,438.36</span>
+                  </div>
+                  <div class="prestacion-item">
+                    <span class="prestacion-name">Vacaciones Proporcionales</span>
+                    <span class="prestacion-val" id="dispVacacionesVal">$1,808.22</span>
+                  </div>
+                  <div class="prestacion-item">
+                    <span class="prestacion-name">Prima Vacacional (25%)</span>
+                    <span class="prestacion-val" id="dispPrimaVacacionalVal">$452.05</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- MÓDULO 2: COMPARADOR FINIQUITO VS LIQUIDACIÓN -->
+        <div class="tool-pane" id="pane-comparador" role="tabpanel" aria-labelledby="tabBtnComparador">
+          <div class="tool-hero-box">
+            
+            <div class="comparador-controls">
+              <div class="comp-control-group">
+                <label for="compSalary" class="form-label">Sueldo Mensual:</label>
+                <div class="input-prefix-wrapper">
+                  <span class="input-currency">$</span>
+                  <input type="number" id="compSalary" class="form-control" value="20000" min="1000" step="1000">
+                </div>
+              </div>
+
+              <div class="comp-control-group">
+                <label for="compYears" class="form-label">Años Antigüedad:</label>
+                <input type="number" id="compYears" class="form-control" value="3" min="0.5" max="40" step="0.5">
+              </div>
+
+              <button type="button" class="btn btn-primary" id="btnActualizarComparador">
+                Comparar
+              </button>
+            </div>
+
+            <div class="comparison-cards-grid mt-4">
+              <!-- Finiquito -->
+              <div class="comp-card comp-card-finiquito">
+                <div class="comp-card-badge">Renuncia</div>
+                <h4 class="comp-card-title">Finiquito</h4>
+                <div class="comp-amount" id="dispFiniquitoTotal">$12,000.00</div>
+                <ul class="comp-items-list">
+                  <li class="comp-item-included"><span>Prestaciones devengadas</span><strong id="dispFiniquitoPrestaciones">$12,000</strong></li>
+                  <li class="comp-item-excluded"><span>Indemnización 90 días</span><strong>$0.00</strong></li>
+                  <li class="comp-item-excluded"><span>20 días por año</span><strong>$0.00</strong></li>
+                </ul>
+              </div>
+
+              <!-- Liquidación -->
+              <div class="comp-card comp-card-liquidacion">
+                <div class="comp-card-badge">Despido Injustificado</div>
+                <h4 class="comp-card-title">Liquidación Legal</h4>
+                <div class="comp-amount" id="dispLiquidacionTotal">$130,000.00</div>
+                <ul class="comp-items-list">
+                  <li class="comp-item-included"><span>Indemnización Constitucional</span><strong id="dispLiq90Dias">$60,000</strong></li>
+                  <li class="comp-item-included"><span>20 días por año laborado</span><strong id="dispLiq20Dias">$40,000</strong></li>
+                  <li class="comp-item-included"><span>Prima de Antigüedad</span><strong id="dispLiqPrima">$18,000</strong></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="difference-banner mt-4">
+              <div class="diff-content">
+                <span class="diff-label">Diferencia a favor en despido:</span>
+                <div class="diff-value" id="dispDiferenciaNeta">+$118,000.00 MXN</div>
+              </div>
+              <button type="button" class="btn btn-secondary btn-sm" data-screen-target="simulador">
+                Ver en Simulador Completo
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- MÓDULO 3: AUDITOR DE CONTRATOS -->
+        <div class="tool-pane" id="pane-auditor" role="tabpanel" aria-labelledby="tabBtnAuditor">
+          <div class="tool-hero-box">
+            <div class="auditor-grid">
+              
+              <div class="auditor-questions-card">
+                <h4 class="mini-form-title">Cuestionario Rápido de Riesgo</h4>
+                
+                <div class="auditor-questions-list" id="auditorQuestionsList">
+                  <div class="question-row" data-question-id="1">
+                    <div class="question-text"><span class="q-number">1</span><p>¿Firmaste hojas en blanco o pagarés al ingresar?</p></div>
+                    <div class="question-buttons">
+                      <button type="button" class="btn-toggle-q" data-val="no">No</button>
+                      <button type="button" class="btn-toggle-q" data-val="yes">Sí</button>
+                    </div>
+                  </div>
+                  <div class="question-row" data-question-id="2">
+                    <div class="question-text"><span class="q-number">2</span><p>¿Tu sueldo en el IMSS es menor al que realmente cobras?</p></div>
+                    <div class="question-buttons">
+                      <button type="button" class="btn-toggle-q" data-val="no">No</button>
+                      <button type="button" class="btn-toggle-q" data-val="yes">Sí</button>
+                    </div>
+                  </div>
+                  <div class="question-row" data-question-id="3">
+                    <div class="question-text"><span class="q-number">3</span><p>¿Trabajas más de 48 horas sin pago de horas extras?</p></div>
+                    <div class="question-buttons">
+                      <button type="button" class="btn-toggle-q" data-val="no">No</button>
+                      <button type="button" class="btn-toggle-q" data-val="yes">Sí</button>
+                    </div>
+                  </div>
+                  <div class="question-row" data-question-id="4">
+                    <div class="question-text"><span class="q-number">4</span><p>¿Te retienen parte del salario o te imponen multas?</p></div>
+                    <div class="question-buttons">
+                      <button type="button" class="btn-toggle-q" data-val="no">No</button>
+                      <button type="button" class="btn-toggle-q" data-val="yes">Sí</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="auditor-result-card">
+                <div class="traffic-light-container">
+                  <div class="light-circle light-green" id="lightGreen" title="Verde"></div>
+                  <div class="light-circle light-yellow" id="lightYellow" title="Amarillo"></div>
+                  <div class="light-circle light-red active" id="lightRed" title="Rojo"></div>
+                </div>
+
+                <div class="risk-status-box">
+                  <span class="risk-badge" id="riskBadge">Riesgo Crítico</span>
+                  <h4 class="risk-title" id="riskTitle">Cláusulas Nulas de Pleno Derecho</h4>
+                  <p class="risk-explanation" id="riskExplanation">
+                    Se detectaron prácticas prohibidas por la LFT. Dichas cláusulas son nulas y amparan rescisión con liquidación completa.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- MÓDULO 4: RUTA PROCESAL -->
+        <div class="tool-pane" id="pane-ruta" role="tabpanel" aria-labelledby="tabBtnRuta">
+          <div class="tool-hero-box">
+            
+            <div class="flowchart-steps-container" id="flowchartSteps">
+              <div class="flow-step active" data-flow-step="1">
+                <div class="flow-step-num">01</div>
+                <div class="flow-step-title">Conciliación</div>
+                <span class="flow-step-time">Máx. 45 días</span>
+              </div>
+              <div class="flow-step" data-flow-step="2">
+                <div class="flow-step-num">02</div>
+                <div class="flow-step-title">Constancia</div>
+                <span class="flow-step-time">No acuerdo</span>
+              </div>
+              <div class="flow-step" data-flow-step="3">
+                <div class="flow-step-num">03</div>
+                <div class="flow-step-title">Demanda</div>
+                <span class="flow-step-time">Tribunal</span>
+              </div>
+              <div class="flow-step" data-flow-step="4">
+                <div class="flow-step-num">04</div>
+                <div class="flow-step-title">Preliminar</div>
+                <span class="flow-step-time">Pruebas</span>
+              </div>
+              <div class="flow-step" data-flow-step="5">
+                <div class="flow-step-num">05</div>
+                <div class="flow-step-title">Juicio</div>
+                <span class="flow-step-time">Sentencia</span>
+              </div>
+            </div>
+
+            <div class="flow-detail-panel mt-4" id="flowDetailPanel">
+              <div class="flow-detail-header">
+                <div>
+                  <span class="stage-tag" id="flowStageTag">Etapa 1 de 5 • Obligatoria</span>
+                  <h3 class="flow-stage-title" id="flowStageTitle">Conciliación Prejudicial</h3>
+                </div>
+                <div class="flow-stage-duration" id="flowStageDuration">
+                  <span>Plazo: 45 días naturales</span>
+                </div>
+              </div>
+              <p class="flow-stage-desc" id="flowStageDesc">
+                Procedimiento ante el Centro de Conciliación Laboral para buscar un convenio voluntario antes de iniciar un juicio.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- MÓDULO 5: GENERADOR DE DOCUMENTOS -->
+        <div class="tool-pane" id="pane-documentos" role="tabpanel" aria-labelledby="tabBtnDocumentos">
+          <div class="tool-hero-box">
+            <div class="doc-generator-grid">
+              
+              <div class="doc-form-card">
+                <h4 class="mini-form-title">Generador de Formatos</h4>
+                <div class="form-group">
+                  <label for="docTemplateSelect" class="form-label">Plantilla:</label>
+                  <select id="docTemplateSelect" class="form-control">
+                    <option value="renuncia">Carta de Renuncia Voluntaria</option>
+                    <option value="rescision">Aviso de Rescisión Laboral (Art. 47 LFT)</option>
+                    <option value="solicitud">Solicitud de Audiencia Conciliatoria</option>
+                    <option value="convenio">Convenio Privado de Finiquito</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="docWorkerName" class="form-label">Nombre del Trabajador:</label>
+                  <input type="text" id="docWorkerName" class="form-control" value="Carlos Mendoza Ramos">
+                </div>
+                <div class="form-group">
+                  <label for="docCompanyName" class="form-label">Empresa / Patrón:</label>
+                  <input type="text" id="docCompanyName" class="form-control" value="Servicios del Norte, S.A.">
+                </div>
+                <button type="button" class="btn btn-primary btn-block" id="btnDownloadDoc">
+                  Descargar PDF Simulado
+                </button>
+              </div>
+
+              <div class="doc-preview-card">
+                <div class="preview-header">
+                  <span class="preview-badge">Vista Previa</span>
+                  <span class="preview-filetype">PDF</span>
+                </div>
+                <div class="doc-sheet" id="docSheetPreview">
+                  <div class="sheet-title" id="previewTitle">CARTA DE RENUNCIA VOLUNTARIA</div>
+                  <div class="sheet-date" id="previewDate">26 de Octubre de 2026</div>
+                  <div class="sheet-addressee" id="previewCompany">A: Servicios del Norte, S.A.</div>
+                  <div class="sheet-content" id="previewBody">
+                    Por medio de la presente manifiesto mi renuncia voluntaria al puesto desempeñado, recibiendo puntualmente todas las prestaciones correspondientes.
+                  </div>
+                  <div class="sheet-signature">
+                    <div class="signature-line"></div>
+                    <strong id="previewSignatureName">Carlos Mendoza Ramos</strong>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- PANTALLA 4: MARCO NORMATIVO                                             -->
+    <!-- ======================================================================= -->
+    <section class="screen" id="screen-reglas" data-screen="reglas" aria-labelledby="reglasTitle">
+      <div class="container">
+        
+        <header class="section-heading text-center">
+          <span class="badge-pill">Marco Legal LFT</span>
+          <h2 class="section-title" id="reglasTitle">Criterios Jurídicos de la Plataforma</h2>
+          <p class="section-description">
+            Normas de la Ley Federal del Trabajo que gobiernan los algoritmos del sistema. Haz clic para consultar cada criterio.
+          </p>
+        </header>
+
+        <!-- Acordeón Compacto (Todos Cerrados por Defecto para evitar exceso de información) -->
+        <div class="accordion-container" id="rulesAccordion">
+          
+          <div class="accordion-item" data-rule="criterio-indemnizacion">
+            <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="ruleContent1">
+              <div class="accordion-header-left">
+                <span class="rule-badge">Criterio 01</span>
+                <span class="accordion-title">Indemnización Constitucional por Despido</span>
+              </div>
+              <div class="accordion-header-right">
+                <span class="status-indicator">Activo en Simulador</span>
+                <span class="accordion-chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </span>
+              </div>
+            </button>
+            <div class="accordion-panel" id="ruleContent1" role="region">
+              <div class="accordion-inner">
+                <div class="rule-details">
+                  <p class="rule-statement">
+                    En despido injustificado aplica la base legal de <strong>90 días de Salario Diario Integrado</strong> más <strong>20 días de salario por año trabajado</strong> y prima de antigüedad proporcional (Arts. 48, 50 y 162 LFT).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-rule="criterio-prescripcion">
+            <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="ruleContent2">
+              <div class="accordion-header-left">
+                <span class="rule-badge">Criterio 02</span>
+                <span class="accordion-title">Prescripción de Acciones Laborales</span>
+              </div>
+              <div class="accordion-header-right">
+                <span class="status-indicator">Plazo de Ley</span>
+                <span class="accordion-chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </span>
+              </div>
+            </button>
+            <div class="accordion-panel" id="ruleContent2" role="region">
+              <div class="accordion-inner">
+                <div class="rule-details">
+                  <p class="rule-statement">
+                    Las acciones por despido prescriben en <strong>dos meses naturales</strong> (60 días). La plataforma previene al usuario para evitar la pérdida de sus derechos procesales (Art. 518 LFT).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-rule="criterio-confidencialidad">
+            <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="ruleContent3">
+              <div class="accordion-header-left">
+                <span class="rule-badge">Criterio 03</span>
+                <span class="accordion-title">Secreto Profesional y Privacidad</span>
+              </div>
+              <div class="accordion-header-right">
+                <span class="status-indicator">Blindaje Deontológico</span>
+                <span class="accordion-chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </span>
+              </div>
+            </button>
+            <div class="accordion-panel" id="ruleContent3" role="region">
+              <div class="accordion-inner">
+                <div class="rule-details">
+                  <p class="rule-statement">
+                    Los datos contractuales y salariales están amparados bajo <strong>secreto profesional</strong> y la legislación de protección de datos personales. Se prohíbe su cesión a terceros.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- PANTALLA 5: SIMULADOR DE LIQUIDACIÓN                                    -->
+    <!-- ======================================================================= -->
+    <section class="screen" id="screen-simulador" data-screen="simulador" aria-labelledby="simuladorTitle">
+      <div class="container">
+        
+        <header class="section-heading text-center">
+          <span class="badge-pill">Cálculo en Tiempo Real</span>
+          <h2 class="section-title" id="simuladorTitle">Simulador de Liquidación</h2>
+          <p class="section-description">
+            Ingresa tu sueldo y antigüedad para calcular el desglose estimado de tu liquidación o finiquito.
+          </p>
+        </header>
+
+        <div class="simulator-wrapper">
+          
+          <!-- Formulario Conciso -->
+          <div class="simulator-form-container">
+            <div class="form-header">
+              <h3 class="form-title">Datos Laborales</h3>
+            </div>
+
+            <!-- Presets -->
+            <div class="presets-group">
+              <span class="presets-label">Casos Rápidos:</span>
+              <div class="preset-buttons">
+                <button type="button" class="preset-btn" data-preset="despido-3">Despido 3 años</button>
+                <button type="button" class="preset-btn" data-preset="renuncia-5">Renuncia 5 años</button>
+                <button type="button" class="preset-btn" data-preset="despido-1">Despido 1 año</button>
+              </div>
+            </div>
+
+            <form id="liquidationForm" class="simulator-form" novalidate>
+              
+              <div class="form-group">
+                <label for="monthlySalary" class="form-label">Sueldo Mensual ($ MXN)</label>
+                <div class="input-prefix-wrapper">
+                  <span class="input-currency">$</span>
+                  <input type="number" id="monthlySalary" class="form-control" value="18000" min="1" step="500" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="yearsWorked" class="form-label">Antigüedad (Años)</label>
+                <input type="number" id="yearsWorked" class="form-control" value="3" min="0.1" max="50" step="0.5" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Motivo de Salida</label>
+                <div class="radio-options-grid">
+                  <label class="radio-card selected" for="reasonDespido">
+                    <input type="radio" id="reasonDespido" name="exitReason" value="despido" checked>
+                    <div class="radio-card-content">
+                      <span class="radio-card-title">Despido Injustificado</span>
+                    </div>
+                  </label>
+                  <label class="radio-card" for="reasonRenuncia">
+                    <input type="radio" id="reasonRenuncia" name="exitReason" value="renuncia">
+                    <div class="radio-card-content">
+                      <span class="radio-card-title">Renuncia Voluntaria</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="pendingVacations" class="form-label">Días Vacaciones Pendientes</label>
+                <input type="number" id="pendingVacations" class="form-control" value="6" min="0" max="60">
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" id="btnCalculate" class="btn btn-primary btn-block">
+                  Calcular Estimación
+                </button>
+                <button type="button" id="btnReset" class="btn btn-secondary">
+                  Restablecer
+                </button>
+              </div>
+
+            </form>
+          </div>
+
+          <!-- Resultados con Desglose Ocultable -->
+          <div class="simulator-results-container" id="resultsContainer">
+            
+            <div class="results-header">
+              <span class="results-badge" id="resultsTypeBadge">Despido Injustificado</span>
+              <span class="results-timestamp" id="resultsTimestamp">Calculado hoy</span>
+            </div>
+
+            <!-- Gran Total Destacado -->
+            <div class="total-highlight-card">
+              <span class="total-label">Total Neto Estimado:</span>
+              <div class="total-amount-wrapper">
+                <span class="currency-symbol">$</span>
+                <span class="total-amount" id="displayTotal">106,800.00</span>
+                <span class="currency-code">MXN</span>
+              </div>
+            </div>
+
+            <!-- Botón para Mostrar/Ocultar Desglose -->
+            <div class="text-center mb-3">
+              <button type="button" class="btn btn-secondary btn-sm" id="btnToggleBreakdown">
+                <span id="breakdownBtnText">Ocultar Desglose Detallado</span>
+              </button>
+            </div>
+
+            <!-- Tabla de Desglose -->
+            <div class="table-breakdown-wrapper" id="breakdownWrapper">
+              <table class="breakdown-table" aria-label="Desglose">
+                <thead>
+                  <tr>
+                    <th scope="col">Concepto</th>
+                    <th scope="col" class="text-right">Monto Estimado</th>
+                  </tr>
+                </thead>
+                <tbody id="breakdownTbody">
+                  <tr id="rowIndemnizacion">
+                    <td>Indemnización Constitucional (90 días)</td>
+                    <td class="text-right text-bold" id="valIndemnizacion">$54,000.00</td>
+                  </tr>
+                  <tr id="rowVeinteDias">
+                    <td>Indemnización Adicional (20 días/año)</td>
+                    <td class="text-right text-bold" id="valVeinteDias">$36,000.00</td>
+                  </tr>
+                  <tr id="rowPrimaAntiguedad">
+                    <td>Prima de Antigüedad</td>
+                    <td class="text-right text-bold" id="valPrimaAntiguedad">$10,480.00</td>
+                  </tr>
+                  <tr id="rowAguinaldo">
+                    <td>Aguinaldo Proporcional</td>
+                    <td class="text-right text-bold" id="valAguinaldo">$4,500.00</td>
+                  </tr>
+                  <tr id="rowVacaciones">
+                    <td>Vacaciones y Prima Vacacional</td>
+                    <td class="text-right text-bold" id="valVacaciones">$4,500.00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="results-actions mt-3">
+              <button type="button" class="btn btn-secondary btn-sm" id="btnExportSummary">
+                Descargar Resumen PDF
+              </button>
+              <button type="button" class="btn btn-primary btn-sm" id="btnOpenScheduleModal">
+                Generar Documentos
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
     </section>
 
   </main>
 
-  <footer class="pie">
-    <div class="contenedor">
-      <div class="aviso" role="note">
-        <h2>Descargo de responsabilidad</h2>
-        <p>Los resultados generados por la App Jurídica Laboral tienen fines informativos y preventivos; bajo ninguna circunstancia sustituyen el consejo formal de un abogado experto (RN-02). La aplicación es estrictamente informativa, no almacenará información en bases de datos externas y no sustituirá el consejo formal de un abogado laboral.</p>
+  <!-- ========================================================================= -->
+  <!-- MODAL DE FEEDBACK VISUAL                                                  -->
+  <!-- ========================================================================= -->
+  <div class="modal-overlay" id="feedbackModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="closeModalBtn" aria-label="Cerrar modal">&times;</button>
+      
+      <div class="modal-icon-circle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
       </div>
-      <p class="pie-nota">
-        App Jurídica Laboral · Proyecto de Ingeniería de Software ·
-        <a href="https://github.com/Ivanmagallona/App-Jur-dica-Laboral" target="_blank" rel="noopener">Repositorio en GitHub</a>
+
+      <h3 class="modal-title" id="modalTitle">Cálculo Procesado</h3>
+      <p class="modal-text" id="modalMessage">
+        Los valores se han computado conforme a la Ley Federal del Trabajo.
       </p>
+
+      <div class="modal-summary-box" id="modalSummaryBox">
+        <div class="summary-line">
+          <span>Motivo:</span>
+          <strong id="modalSummaryReason">Despido Injustificado</strong>
+        </div>
+        <div class="summary-line">
+          <span>Antigüedad:</span>
+          <strong id="modalSummaryYears">3 años</strong>
+        </div>
+        <div class="summary-line highlight">
+          <span>Total Estimado:</span>
+          <strong id="modalSummaryAmount">$106,800.00 MXN</strong>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <button type="button" class="btn btn-primary btn-block" id="modalAcceptBtn">
+          Aceptar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Flotante -->
+  <div class="toast-notification" id="toastNotification" role="alert" aria-live="assertive">
+    <div class="toast-icon">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" y1="16" x2="12" y2="12"></line>
+        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+      </svg>
+    </div>
+    <span class="toast-text" id="toastText">Valores actualizados</span>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- FOOTER GLOBAL                                                             -->
+  <!-- ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col-brand">
+          <div class="brand">
+            <div class="brand-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 3v18"></path>
+                <path d="m3 7 9-3 9 3"></path>
+                <path d="M6 7l-3 7h6l-3-7z"></path>
+                <path d="M18 7l-3 7h6l-3-7z"></path>
+                <path d="M4 21h16"></path>
+              </svg>
+            </div>
+            <span class="brand-title">App Jurídica Laboral</span>
+          </div>
+          <p class="footer-text mt-2">
+            Plataforma para la certeza y modernización de servicios legales laborales en México.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Secciones</h4>
+          <ul class="footer-links">
+            <li><button type="button" class="footer-link-btn" data-screen-target="inicio">Inicio</button></li>
+            <li><button type="button" class="footer-link-btn" data-screen-target="usuarios">Usuarios</button></li>
+            <li><button type="button" class="footer-link-btn" data-screen-target="modulos">Módulos</button></li>
+            <li><button type="button" class="footer-link-btn" data-screen-target="reglas">Normativa</button></li>
+            <li><button type="button" class="footer-link-btn" data-screen-target="simulador">Simulador</button></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Soporte</h4>
+          <ul class="footer-links">
+            <li><button type="button" class="footer-link-btn" data-screen-target="reglas">Artículos LFT</button></li>
+            <li><button type="button" class="footer-link-btn" data-screen-target="modulos">Auditoría</button></li>
+            <li><a href="mailto:soporte@appjuridicalaboral.demo" class="footer-link-btn">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 App Jurídica Laboral. Todos los derechos reservados.</p>
+        <p class="footer-disclaimer">Información basada en la legislación federal mexicana.</p>
+      </div>
     </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
