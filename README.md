@@ -464,3 +464,15 @@ El sitio debe estar dividido en secciones visualmente claras que representen la 
   --text-color: #FFFFFF;
 }
 
+## 7. Distribución de Trabajo
+| No. | Integrante | Actividad | Porcentaje de trabajo |
+| :---: | :--- | :--- | :---: |
+| 1 | Emilo Leandro González Martín | Introducción y objeto del refinamiento | 12.5% |
+| 2 | Elberth Alberto Ek Cetz | Refinamiento de requisitos funcionales | 12.5% |
+| 3 | Osvaldo Francisco Solis Medina | Requisitos No funcionales de negocio | 12.5% |
+| 4 | Roberto Quintal Martinez | Historias de usuarios y criterios de aceptación | 12.5% |
+| 5 | Abraham Isai Caamal Hau | Matriz de priorización | 12.5% |
+| 6 | Israel Vázquez Cortazar | Evaluación del diseño – navegación y estructura | 12.5% |
+| 7 | Iván Leonardo Magallón Arias | Evolución del diseño – experiencia de usuario | 12.5% |
+| 8 | Basilio Medina Mauro | Edición del video | 12.5% |
+| | **Total** | | **100%** |
